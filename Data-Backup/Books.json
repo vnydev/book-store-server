@@ -1,0 +1,95 @@
+[{
+  "_id": {
+    "$oid": "6468fcf00786bc2c81fda7d1"
+  },
+  "title": "The Alchemist",
+  "languages": [
+    "English"
+  ],
+  "author": {
+    "name": "Paulo Coelho",
+    "phone": 1234567890,
+    "address": "Brazil",
+    "_id": {
+      "$oid": "6468fcf00786bc2c81fda7d2"
+    }
+  },
+  "price": 1001,
+  "rating": 5,
+  "publishDate": {
+    "$date": {
+      "$numberLong": "-410247000000"
+    }
+  },
+  "createdAt": {
+    "$date": "2023-05-20T17:01:36.105Z"
+  },
+  "updatedAt": {
+    "$date": "2023-05-20T17:01:36.105Z"
+  },
+  "__v": 0,
+  "image": "alchemist.png",
+  "descriptions": "The Alchemist is a novel by Brazilian author Paulo Coelho which was first published in 1988. Originally written in Portuguese, it became a widely translated international bestseller."
+},{
+  "_id": {
+    "$oid": "6468fe340786bc2c81fda7d4"
+  },
+  "title": "2 States: The Story of My Marriage",
+  "descriptions": "The Story of My Marriage commonly known as 2 States is a 2009 novel written by Chetan Bhagat. It is the story about a couple coming from two states in India, who face hardships in convincing their parents to approve of their marriage. Bhagat wrote this novel after quitting his job as an investment banker.",
+  "image": "2states.jpg",
+  "genres": "Novel",
+  "languages": [
+    "English",
+    "Hindi"
+  ],
+  "author": {
+    "name": "Chetan Bhagat",
+    "phone": 1234567890,
+    "address": "Mumbai, India",
+    "_id": {
+      "$oid": "6468fe340786bc2c81fda7d5"
+    }
+  },
+  "price": 300,
+  "rating": 4,
+  "publishDate": {
+    "$date": "2009-08-09T18:30:00.000Z"
+  },
+  "createdAt": {
+    "$date": "2023-05-20T17:07:00.516Z"
+  },
+  "updatedAt": {
+    "$date": "2023-05-20T17:07:00.516Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "646a4319229a3dcc513d5246"
+  },
+  "title": "Learning React: Functional Web Development",
+  "descriptions": "If you want to learn how to build efficient user interfaces with React, this is your book. Authors Alex Banks and Eve Porcello show you how to create UIs with this small JavaScript library that can deftly display data changes on large-scale, data-driven websites without page reloads.",
+  "image": "learn-react.jpg",
+  "genres": "Technical",
+  "languages": [
+    "English"
+  ],
+  "author": {
+    "name": "Alex Banks, Eve Porcello",
+    "phone": 1234567890,
+    "_id": {
+      "$oid": "646a4319229a3dcc513d5247"
+    }
+  },
+  "price": 1500,
+  "rating": 3,
+  "publishDate": {
+    "$date": "2017-01-05T18:30:00.000Z"
+  },
+  "createdAt": {
+    "$date": "2023-05-21T16:13:13.725Z"
+  },
+  "updatedAt": {
+    "$date": "2023-05-21T16:13:13.725Z"
+  },
+  "__v": 0
+}]

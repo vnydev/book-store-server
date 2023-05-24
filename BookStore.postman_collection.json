@@ -1,0 +1,64 @@
+{
+	"info": {
+		"_postman_id": "467ff7e7-7a69-4f9b-a7cf-7b278cfef617",
+		"name": "BookStore",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "3508331",
+		"_collection_link": "https://equinix-api.postman.co/workspace/Equinix~4823feb3-4fcf-40f6-9943-331339d77917/collection/3508331-467ff7e7-7a69-4f9b-a7cf-7b278cfef617?action=share&creator=3508331&source=collection_link"
+	},
+	"item": [
+		{
+			"name": "http://localhost:3000/book-store",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\": \"Learning React: Functional Web Development\",\n    \"author\": {\n        \"name\": \"Alex Banks, Eve Porcello\",\n        \"phone\": 123456789\n    },\n    \"descriptions\": \"If you want to learn how to build efficient user interfaces with React, this is your book. Authors Alex Banks and Eve Porcello show you how to create UIs with this small JavaScript library that can deftly display data changes on large-scale, data-driven websites without page reloads.\",\n    \"genres\": \"Technical\",\n    \"image\": \"learn-react.jpg\",\n    \"languages\": [\"Enlglish\"],\n    \"publishDate\": \"01/06/2017\",\n    \"price\": 1500,\n    \"rating\": 3\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/book-store",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"book-store"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/book-store?search=The",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/book-store?search=The",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"book-store"
+					],
+					"query": [
+						{
+							"key": "search",
+							"value": "The"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
