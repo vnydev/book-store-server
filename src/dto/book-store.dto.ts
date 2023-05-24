@@ -1,4 +1,4 @@
-import { IsNumber, IsString, IsInt, Min, Max, IsObject, IsArray, IsNotEmpty } from 'class-validator'
+import { IsNumber, IsString, IsInt, Min, Max, IsObject, IsArray, IsNotEmpty, IsOptional } from 'class-validator'
 import { Author } from './author.dto'
 
 export class BookStoreDTO {
@@ -28,7 +28,14 @@ export class BookStoreDTO {
 
     @IsString()
     @IsNotEmpty()
-    publishDate: Date
+    publishDate: string | Date
+
+    @IsString()
+    createdAt?: string
+
+    @IsString()
+    @IsOptional()
+    updatedAt?: string
 
     @IsNumber()
     @IsNotEmpty()
@@ -40,4 +47,9 @@ export class BookStoreDTO {
     @IsNotEmpty()
     rating: number
 
+    @IsString()
+    _id?: string | Object
+
+    @IsNumber()
+    __v?: number
 }

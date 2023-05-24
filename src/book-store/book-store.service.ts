@@ -8,26 +8,35 @@ import { BookStoreDTO } from '../dto/book-store.dto'
 export class BookStoreService {
     constructor(
         @InjectModel(ModelName) private BooksModel: Model<Books>
-    ) {}
+    ) { }
 
-    async createBooks (book: BookStoreDTO ): Promise<BookStoreDTO> {
-        const bookToCreate = {
-            ...book,
-            publishDate: new Date(book.publishDate)
+    async createBooks(book: BookStoreDTO): Promise<BookStoreDTO> {
+        try {
+            const bookToCreate = {
+                ...book,
+                publishDate: new Date(book.publishDate)
+            }
+            const newbook = new this.BooksModel(bookToCreate)
+            const result = await newbook.save()
+
+            return result
+        } catch (error) {
+            throw new Error(error)
         }
-        const newbook = new this.BooksModel(bookToCreate)
-        const result = await newbook.save()
-
-        return result
     }
 
-    async getBooks (search: string): Promise<BookStoreDTO[]> {
-        const books = await this.BooksModel.find({ $or: [
-                {title: {$regex: search, $options: 'i'}},
-                {"author.name": {$regex: search, $options: 'i'}}
-            ]
-        }).exec()
+    async getBooks(search: string): Promise<BookStoreDTO[]> {
+        try {
+            const books = await this.BooksModel.find({
+                $or: [
+                    { title: { $regex: search, $options: 'i' } },
+                    { "author.name": { $regex: search, $options: 'i' } }
+                ]
+            }).exec()
 
-        return books
+            return books
+        } catch (error) {
+            throw new Error(error)
+        }
     }
 }

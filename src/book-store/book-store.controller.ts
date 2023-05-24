@@ -1,4 +1,4 @@
-import { Controller, Get, Post, Body, Param , Query} from '@nestjs/common';
+import { Controller, Get, Post, Body, Query} from '@nestjs/common';
 import { BookStoreService } from './book-store.service';
 import { BookStoreDTO } from '../dto/book-store.dto'
 
@@ -16,7 +16,7 @@ export class BookStoreController {
 
     @Get()
     async getBooks(
-        @Query() { search }: any
+        @Query() { search }: { search: string },
     ): Promise<BookStoreDTO[]> {
         const result =  await this.BookStoreService.getBooks(search)
 

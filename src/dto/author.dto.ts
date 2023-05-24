@@ -13,5 +13,5 @@ export class Author {
 
     @IsString()
     @IsOptional()
-    address: string
+    address?: string
 }
